@@ -1,0 +1,65 @@
+create database inovatec;
+use inovatec;
+
+create table tipodejeto(
+tipid int primary key auto_increment,
+tipdesc varchar(50) unique not null);
+
+create table dejeto(
+dejid int primary key auto_increment,
+dejnome varchar(50) not null,
+dejtipid int not null,
+foreign key (dejtipid) references tipodejeto(tipid));
+
+
+create table endereco(
+endid int primary key auto_increment,
+endrua varchar(50) not null,
+endnum int(8) not null,
+endbai varchar(50) not null);
+
+create table tipopessoa(
+tippid int primary key auto_increment not null unique,
+tippdesc varchar(25) not null,
+tippnome varchar(50) not null,
+tipprazao varchar(50) not null,
+tippnomef varchar(50) not null);
+
+create table participante(
+parid int primary key auto_increment not null unique,
+partel varchar(15) not null unique,
+parcpf_cnpj varchar(20) not null,
+parendid int,
+foreign key (parendid) references endereco(endid),
+tipparid int,
+foreign key (tipparid) references tipopessoa(tippid));
+
+create table coletor(
+colid int primary key auto_increment not null unique,
+coltel varchar(15) not null unique,
+colcpf_cnpj varchar(20) not null,
+colendid int,
+foreign key (colendid) references endereco(endid),
+tipcolid int,
+foreign key (tipcolid) references tipopessoa(tippid));
+
+create table publicacao(
+pubid int primary key auto_increment not null unique,
+pubdata date not null,
+pubrua varchar(50) not null,
+pubbairro varchar(50) not null,
+pubnum int(8) not null,
+pubdejqtde float(10,2) not null,
+pubparid int,
+foreign key (pubparid) references participante(parid),
+pubcolid int,
+foreign key (pubcolid) references coletor(colid),
+pubdejid int,
+foreign key (pubdejid) references dejeto(dejid));
+
+create table avaliacao(
+avaid int primary key auto_increment not null unique,
+avanome varchar(50) not null,
+avadesc varchar(255) not null,
+avacurso varchar(20) not null,
+avamat int(6) not null unique);
