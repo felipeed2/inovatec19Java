@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11/06/2019 14:20:43 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.bean.Endereco" table="endereco" catalog="inovatec19" optimistic-lock="version">
+        <id name="endid" type="java.lang.Integer">
+            <column name="endid" />
+            <generator class="identity" />
+        </id>
+        <property name="endrua" type="string">
+            <column name="endrua" length="50" not-null="true" />
+        </property>
+        <property name="endnum" type="int">
+            <column name="endnum" not-null="true" />
+        </property>
+        <property name="endbai" type="string">
+            <column name="endbai" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

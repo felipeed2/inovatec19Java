@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11/06/2019 14:20:43 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.bean.Tipopessoa" table="tipopessoa" catalog="inovatec19" optimistic-lock="version">
+        <id name="tippid" type="java.lang.Integer">
+            <column name="tippid" />
+            <generator class="identity" />
+        </id>
+        <property name="tippdesc" type="string">
+            <column name="tippdesc" length="25" not-null="true" unique="true" />
+        </property>
+        <property name="tippnome" type="string">
+            <column name="tippnome" length="50" />
+        </property>
+        <property name="tipprazao" type="string">
+            <column name="tipprazao" length="50" unique="true" />
+        </property>
+        <property name="tippnomef" type="string">
+            <column name="tippnomef" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

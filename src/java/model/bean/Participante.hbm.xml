@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11/06/2019 14:20:43 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.bean.Participante" table="participante" catalog="inovatec19" optimistic-lock="version">
+        <id name="parid" type="java.lang.Integer">
+            <column name="parid" />
+            <generator class="identity" />
+        </id>
+        <property name="partel" type="string">
+            <column name="partel" length="15" not-null="true" unique="true" />
+        </property>
+        <property name="parcpfCnpj" type="string">
+            <column name="parcpf_cnpj" length="20" not-null="true" />
+        </property>
+        <property name="parendid" type="java.lang.Integer">
+            <column name="parendid" />
+        </property>
+        <property name="tipparid" type="java.lang.Integer">
+            <column name="tipparid" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11/06/2019 14:20:43 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.bean.Publicacao" table="publicacao" catalog="inovatec19" optimistic-lock="version">
+        <id name="pubid" type="java.lang.Integer">
+            <column name="pubid" />
+            <generator class="identity" />
+        </id>
+        <property name="pubdata" type="date">
+            <column name="pubdata" length="10" not-null="true" />
+        </property>
+        <property name="pubrua" type="string">
+            <column name="pubrua" length="50" not-null="true" />
+        </property>
+        <property name="pubbairro" type="string">
+            <column name="pubbairro" length="50" not-null="true" />
+        </property>
+        <property name="pubnum" type="int">
+            <column name="pubnum" not-null="true" />
+        </property>
+        <property name="pubdejqtde" type="float">
+            <column name="pubdejqtde" precision="6" not-null="true" />
+        </property>
+        <property name="pubestatus" type="boolean">
+            <column name="pubestatus" not-null="true" />
+        </property>
+        <property name="pubparid" type="java.lang.Integer">
+            <column name="pubparid" />
+        </property>
+        <property name="pubcolid" type="java.lang.Integer">
+            <column name="pubcolid" />
+        </property>
+        <property name="pubdejid" type="java.lang.Integer">
+            <column name="pubdejid" />
+        </property>
+    </class>
+</hibernate-mapping>

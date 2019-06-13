@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11/06/2019 14:20:43 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.bean.Dejeto" table="dejeto" catalog="inovatec19" optimistic-lock="version">
+        <id name="dejid" type="java.lang.Integer">
+            <column name="dejid" />
+            <generator class="identity" />
+        </id>
+        <property name="dejnome" type="string">
+            <column name="dejnome" length="50" not-null="true" />
+        </property>
+        <property name="dejtipid" type="int">
+            <column name="dejtipid" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/inovatec19?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <mapping resource="model/bean/Coletor.hbm.xml"/>
+    <mapping resource="model/bean/Endereco.hbm.xml"/>
+    <mapping resource="model/bean/Tipodejeto.hbm.xml"/>
+    <mapping resource="model/bean/Avaliacao.hbm.xml"/>
+    <mapping resource="model/bean/Dejeto.hbm.xml"/>
+    <mapping resource="model/bean/Tipopessoa.hbm.xml"/>
+    <mapping resource="model/bean/Participante.hbm.xml"/>
+    <mapping resource="model/bean/Publicacao.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

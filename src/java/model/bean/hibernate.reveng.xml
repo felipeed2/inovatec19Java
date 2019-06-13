@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="inovatec19"/>
+  <table-filter match-name="endereco"/>
+  <table-filter match-name="participante"/>
+  <table-filter match-name="tipopessoa"/>
+  <table-filter match-name="avaliacao"/>
+  <table-filter match-name="publicacao"/>
+  <table-filter match-name="dejeto"/>
+  <table-filter match-name="coletor"/>
+  <table-filter match-name="tipodejeto"/>
+</hibernate-reverse-engineering>

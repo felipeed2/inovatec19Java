@@ -1,0 +1,86 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+section div.list-item{
+  background-color: rgb(240, 240, 240);
+  padding: 10px 30px;
+  margin: 20px 0px;
+}
+
+.logoIcon{
+  max-width:50px;
+  max-height:50px;
+  width: auto;
+  height: auto;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://static.makeuseof.com/wp-content/uploads/2017/02/Photoshop-Replace-Background-Featured-670x335.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+section{
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+  text-align: justify;
+}
+
+section h1{
+  padding-bottom: 15px;
+}
+
+section p{
+  text-indent: 2EM;
+  color: rgb(80, 80, 80);
+  line-height: 28px;
+}
+
+footer{
+  /*width: 100%;
+  background-color: rgba(30, 40, 50, 1);
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 12px;23*/
+  background-color: rgba(30, 40, 50, 1);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 600px) {
+    section i{
+      float: none;
+    }
+
+    section p{
+        text-indent: 1EM;
+    }
+
+    section{
+      width: 90%;
+      padding: 20px 10px;
+    }
+
+    section div.list-item{
+      margin: 10px 0px;
+    }
+}
